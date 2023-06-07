@@ -1,7 +1,12 @@
+"use client";
 import Link from "next/link";
 import styles from "./nav.module.css";
+import { deleteCookie } from "cookies-next";
 
 const Nav = () => {
+  const habdleLogout = () => {
+    deleteCookie("isUserLogIn");
+  };
   return (
     <nav className={styles.nav}>
       <ul>
@@ -16,6 +21,9 @@ const Nav = () => {
         </li>
         <li>
           <Link href="/dashboard">Dashboard</Link>
+        </li>
+        <li>
+          <a onClick={habdleLogout}>Logout</a>
         </li>
       </ul>
     </nav>
