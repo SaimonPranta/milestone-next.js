@@ -4,6 +4,7 @@ const nextConfig = {
     unoptimized: true,
     domains: ["server.easyshop50.com"],
   },
+  //this is use for Cpanel Build
   // output: "export",
 };
 

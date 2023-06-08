@@ -23,6 +23,9 @@ const Nav = () => {
           <Link href="/dashboard">Dashboard</Link>
         </li>
         <li>
+          <Link href="/user">User</Link>
+        </li>
+        <li>
           <a onClick={habdleLogout}>Logout</a>
         </li>
       </ul>
