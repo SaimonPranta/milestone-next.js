@@ -5,7 +5,7 @@ import styles from "./dashboard.module.css"
 const page = async () => {
   const res = await fetch("https://server.easyshop50.com/product");
   const data = await res.json();
-  console.log(data.data[0]);
+  // console.log(data.data[0]);
 
   return (
     <div>

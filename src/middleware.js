@@ -6,6 +6,7 @@ import { NextRequest } from "next/server";
 
 export function middleware(NextRequest) {
   let cookie = NextRequest.cookies.get("isUserLogIn")?.value;
+  console.log("Here is call the collies data", cookie);
   if (!cookie && NextRequest.nextUrl.pathname.startsWith("/dashboard")) {
     return NextResponse.rewrite(new URL("/login", NextRequest.url));
   }
